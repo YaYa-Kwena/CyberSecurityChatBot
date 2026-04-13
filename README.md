@@ -68,8 +68,7 @@ This project is managed using GitHub with meaningful commits for each developmen
 A GitHub Actions workflow will be added for continuous integration.
 
 ## CI Screenshot
-Add a screenshot of the successful GitHub Actions run here after the workflow is working.(PLACEHOLDER)
-
+Add a screenshot of the successful GitHub Actions run (check the assets folder)
 ## Video Presentation Link
 https://youtu.be/nWJCcKan9do
 
