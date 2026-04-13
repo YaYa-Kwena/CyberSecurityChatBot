@@ -17,6 +17,11 @@ namespace CyberSecurityChatBot.Services
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Cyan;
 
+            ShowDivider();
+            Console.WriteLine("      Kwena Mokoena's CYBERSECURITY AWARENESS CHATBOT");
+            ShowDivider();
+            Console.WriteLine();
+
             if (File.Exists(filePath))
             {
                 string asciiArt = File.ReadAllText(filePath);
@@ -24,11 +29,17 @@ namespace CyberSecurityChatBot.Services
             }
             else
             {
-                Console.WriteLine("========================================================");
-                Console.WriteLine("         CYBERSECURITY AWARENESS CHATBOT");
-                Console.WriteLine("========================================================");
+                Console.WriteLine("               [ SECURITY BOT ACTIVE ]");
+                Console.WriteLine("                    ______________");
+                Console.WriteLine("                   |  ________   |");
+                Console.WriteLine("                   | |  LOCK  |  |");
+                Console.WriteLine("                   | |________|  |");
+                Console.WriteLine("                   |_____________|");
             }
 
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine("       Stay alert. Stay secure. Stay safe online.");
             Console.ResetColor();
             Console.WriteLine();
         }
@@ -40,14 +51,14 @@ namespace CyberSecurityChatBot.Services
             do
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.Write("Please enter your name: ");
+                Console.Write("Enter your name to begin: ");
                 Console.ResetColor();
 
                 name = Console.ReadLine()?.Trim();
 
                 if (string.IsNullOrWhiteSpace(name))
                 {
-                    ShowErrorMessage("Name cannot be empty. Please try again.");
+                    ShowErrorMessage("Name cannot be empty. Please enter your name.");
                 }
 
             } while (string.IsNullOrWhiteSpace(name));
@@ -59,7 +70,26 @@ namespace CyberSecurityChatBot.Services
         {
             Console.ForegroundColor = ConsoleColor.Green;
             TypeText($"Hello, {userName}! Welcome to the Cybersecurity Awareness ChatBot.");
-            TypeText("I am here to help you stay safe online.");
+            TypeText("I am here to help you learn how to stay safe online.");
+            Console.ResetColor();
+            Console.WriteLine();
+        }
+
+        public void ShowInstructions()
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("You can ask me about:");
+            Console.ResetColor();
+
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(" - Password safety");
+            Console.WriteLine(" - Phishing scams");
+            Console.WriteLine(" - Safe browsing");
+            Console.WriteLine(" - Suspicious links");
+            Console.WriteLine(" - My purpose");
+            Console.WriteLine(" - How I am doing");
+            Console.WriteLine();
+            Console.WriteLine("Type 'exit', 'quit', or 'bye' to close the chatbot.");
             Console.ResetColor();
             Console.WriteLine();
         }
@@ -81,14 +111,16 @@ namespace CyberSecurityChatBot.Services
         public void ShowErrorMessage(string message)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(message);
+            Console.WriteLine($"[Error] {message}");
             Console.ResetColor();
         }
 
         public void ShowExitMessage(string userName)
         {
+            Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Magenta;
-            TypeText($"Goodbye, {userName}. Stay safe online!");
+            TypeText($"Goodbye, {userName}. Thank you for using the Cybersecurity Awareness ChatBot.");
+            TypeText("Remember: Think before you click.");
             Console.ResetColor();
         }
 
@@ -96,6 +128,14 @@ namespace CyberSecurityChatBot.Services
         {
             Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.WriteLine("========================================================");
+            Console.ResetColor();
+        }
+
+        public void ShowSectionTitle(string title)
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine();
+            Console.WriteLine($"========== {title.ToUpper()} ==========");
             Console.ResetColor();
         }
 

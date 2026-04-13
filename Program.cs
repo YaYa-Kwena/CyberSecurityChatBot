@@ -19,12 +19,13 @@ namespace CyberSecurityChatBot
 
             user.Name = uiService.PromptForName();
 
-            uiService.ShowDivider();
+            uiService.ShowSectionTitle("Welcome");
             uiService.ShowWelcomeMessage(user.Name);
-            uiService.ShowBotMessage("You can ask me about passwords, phishing, safe browsing, or suspicious links.");
-            uiService.ShowBotMessage("Type 'exit', 'quit', or 'bye' when you want to close the chatbot.");
-            uiService.ShowDivider();
 
+            uiService.ShowSectionTitle("Instructions");
+            uiService.ShowInstructions();
+
+            uiService.ShowSectionTitle("Chat Session");
             chatbotService.StartConversation(user, uiService);
 
             uiService.ShowExitMessage(user.Name);
