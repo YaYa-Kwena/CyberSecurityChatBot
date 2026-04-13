@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "w+OGRkJiCS4=",
+  "dgSpecHash": "K3k13QwRaWs=",
   "success": true,
   "projectFilePath": "C:\\Users\\kwena\\source\\repos\\CyberSecurityChatBot\\CyberSecurityChatBot.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\kwena\\.nuget\\packages\\system.windows.extensions\\10.0.5\\system.windows.extensions.10.0.5.nupkg.sha512"
+  ],
   "logs": []
 }

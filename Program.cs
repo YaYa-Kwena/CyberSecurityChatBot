@@ -1,4 +1,5 @@
-﻿using CyberSecurityChatBot.Services;
+﻿using CyberSecurityChatBot.Models;
+using CyberSecurityChatBot.Services;
 
 namespace CyberSecurityChatBot
 {
@@ -6,14 +7,19 @@ namespace CyberSecurityChatBot
     {
         static void Main(string[] args)
         {
+            AudioService audioService = new AudioService();
             ConsoleUIService uiService = new ConsoleUIService();
+            UserProfile user = new UserProfile();
 
             uiService.SetupConsole();
+
+            audioService.PlayGreeting("Assets/greeting.wav");
             uiService.DisplayHeader("Assets/ascii-art.txt");
 
-            string userName = uiService.PromptForName();
+            user.Name = uiService.PromptForName();
+
             uiService.ShowDivider();
-            uiService.ShowWelcomeMessage(userName);
+            uiService.ShowWelcomeMessage(user.Name);
             uiService.ShowDivider();
         }
     }
