@@ -1,7 +1,7 @@
 ﻿<Window x:Class="CyberSecurityChatBot.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2000/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2000/xaml"
-        Title="Kwena Mokoena's Cybersecurity Assistant" Height="620" Width="460"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Kwena Mokwena's Cybersecurity Assistant" Height="620" Width="460"
         Background="#121212" WindowStartupLocation="CenterScreen">
 	<Grid Margin="15">
 		<Grid.RowDefinitions>
