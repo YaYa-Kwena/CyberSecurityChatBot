@@ -1,11 +1,37 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+
   <PropertyGroup>
+
     <OutputType>WinExe</OutputType>
+
     <TargetFramework>net8.0-windows</TargetFramework>
+
     <Nullable>enable</Nullable>
+
     <ImplicitUsings>enable</ImplicitUsings>
+
     <UseWPF>true</UseWPF>
+
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\ascii-art.txt" />
+    <None Remove="Assets\greeting.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\ascii-art.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\greeting.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Windows.Extensions" Version="10.0.5" />
+  </ItemGroup>
+
 
 </Project>

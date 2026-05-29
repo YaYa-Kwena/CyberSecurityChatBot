@@ -1,13 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
+<<<<<<< HEAD
 VisualStudioVersion = 17.14.36310.24 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberSecurityChatBot", "CyberSecurityChatBot.csproj", "{CC37DBFF-E596-4AD1-9E95-F62D5AB1B489}"
+=======
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberSecurityChatBot", "CyberSecurityChatBot.csproj", "{232ADBEA-EDE2-4F3A-9F80-ADD9FEAF8280}"
+>>>>>>> 7de373ae8cbf7b7e64a8f04ac34858a91a310017
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+<<<<<<< HEAD
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
@@ -15,11 +22,35 @@ Global
 		{CC37DBFF-E596-4AD1-9E95-F62D5AB1B489}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC37DBFF-E596-4AD1-9E95-F62D5AB1B489}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC37DBFF-E596-4AD1-9E95-F62D5AB1B489}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{232ADBEA-EDE2-4F3A-9F80-ADD9FEAF8280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{232ADBEA-EDE2-4F3A-9F80-ADD9FEAF8280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{232ADBEA-EDE2-4F3A-9F80-ADD9FEAF8280}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{232ADBEA-EDE2-4F3A-9F80-ADD9FEAF8280}.Debug|x64.Build.0 = Debug|Any CPU
+		{232ADBEA-EDE2-4F3A-9F80-ADD9FEAF8280}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{232ADBEA-EDE2-4F3A-9F80-ADD9FEAF8280}.Debug|x86.Build.0 = Debug|Any CPU
+		{232ADBEA-EDE2-4F3A-9F80-ADD9FEAF8280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{232ADBEA-EDE2-4F3A-9F80-ADD9FEAF8280}.Release|Any CPU.Build.0 = Release|Any CPU
+		{232ADBEA-EDE2-4F3A-9F80-ADD9FEAF8280}.Release|x64.ActiveCfg = Release|Any CPU
+		{232ADBEA-EDE2-4F3A-9F80-ADD9FEAF8280}.Release|x64.Build.0 = Release|Any CPU
+		{232ADBEA-EDE2-4F3A-9F80-ADD9FEAF8280}.Release|x86.ActiveCfg = Release|Any CPU
+		{232ADBEA-EDE2-4F3A-9F80-ADD9FEAF8280}.Release|x86.Build.0 = Release|Any CPU
+>>>>>>> 7de373ae8cbf7b7e64a8f04ac34858a91a310017
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+<<<<<<< HEAD
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D4AB7384-FCDA-4463-A209-EA661CB49FF5}
 	EndGlobalSection
+=======
+>>>>>>> 7de373ae8cbf7b7e64a8f04ac34858a91a310017
 EndGlobal
