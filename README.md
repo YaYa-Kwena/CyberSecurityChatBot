@@ -70,7 +70,7 @@ Welcome to Part 2 of the Cybersecurity Awareness Chatbot! In this phase, the app
 
 **Key Updates in this Release:**
 * **Modern GUI Design:** A sleek, high-contrast dark theme built with XAML, featuring color-coded chat bubbles and my custom ASCII shield art.
-* **Multimedia Integration:** Plays a custom voice greeting automatically upon launching.
+* **Multimedia Integration:** Still plays a custom voice greeting automatically upon launching.
 * **Decoupled Architecture:** The backend logic has been professionally separated into distinct, scalable classes (`ChatBot.cs`, `KeywordResponder.cs`, `SentimentDetector.cs`, and `MemoryStore.cs`).
 * **Advanced C# Features:** Implemented generic collections (`Dictionary`, `List`) for memory tracking and keyword pools, alongside a `Func` delegate to strictly separate the UI thread from the logic processing pipeline.
 * **Dynamic Conversations:** The bot now detects user sentiment (e.g., worried, curious), remembers the user's name and favorite topics, and maintains state-aware conversation flows utilizing random response pools to keep the chat engaging.
