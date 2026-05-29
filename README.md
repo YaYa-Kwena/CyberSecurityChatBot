@@ -40,7 +40,7 @@ CyberSecurityChatBot
 └── CyberSecurityChatBot.csproj
 
 
-## How to Run the Program
+## How to Run the Program (for part 1)
 1. Open the project in Visual Studio 2022.
 2. Make sure the NuGet package System.Windows.Extensions is installed.
 3. Ensure that:
@@ -62,6 +62,30 @@ CyberSecurityChatBot
 - What is phishing?
 - Give me safe browsing tips
 - How do I identify a suspicious link?
+
+  # Cybersecurity Awareness Chatbot (Part 2 - WPF GUI)
+
+## Project Overview & Part 2 Updates
+Welcome to Part 2 of the Cybersecurity Awareness Chatbot! In this phase, the application has been entirely transformed from a standard command-line interface into a fully interactive **Graphical User Interface (GUI)** using **Windows Presentation Foundation (WPF)**.
+
+**Key Updates in this Release:**
+* **Modern GUI Design:** A sleek, high-contrast dark theme built with XAML, featuring color-coded chat bubbles and my custom ASCII shield art.
+* **Multimedia Integration:** Plays a custom voice greeting automatically upon launching.
+* **Decoupled Architecture:** The backend logic has been professionally separated into distinct, scalable classes (`ChatBot.cs`, `KeywordResponder.cs`, `SentimentDetector.cs`, and `MemoryStore.cs`).
+* **Advanced C# Features:** Implemented generic collections (`Dictionary`, `List`) for memory tracking and keyword pools, alongside a `Func` delegate to strictly separate the UI thread from the logic processing pipeline.
+* **Dynamic Conversations:** The bot now detects user sentiment (e.g., worried, curious), remembers the user's name and favorite topics, and maintains state-aware conversation flows utilizing random response pools to keep the chat engaging.
+
+## How to Run the Application
+
+### Prerequisites
+* **Visual Studio 2022** (with the ".NET desktop development" workload installed)
+* **.NET 8.0 SDK**
+
+### Execution Steps
+1. **Clone the repository** to your local machine using Git:
+   ```bash
+   git clone [https://github.com/YaYa-Kwena/CyberSecurityChatBot.git](https://github.com/YaYa-Kwena/CyberSecurityChatBot.git)
+2. ** Run the build
 
 ## GitHub and CI
 This project is managed using GitHub with meaningful commits for each development stage.  
