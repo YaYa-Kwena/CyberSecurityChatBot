@@ -35,7 +35,7 @@ namespace CyberSecurityChatBot
             }
             catch (Exception) { /* Failsafe for audio driver locks */ }
 
-            AppendMessage("Bot", "Hello! Welcome to Kwena Mokwena's Cybersecurity Awareness Bot. I'm here to help you stay safe online. Before we start, what is your name?");
+            AppendMessage("Bot", "Hello! Welcome to Kwena Mokoena's Cybersecurity Awareness Bot. I'm here to help you stay safe online. Before we start, what is your name?");
         }
 
         private void ProcessInteraction()
