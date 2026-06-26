@@ -95,6 +95,8 @@ A GitHub Actions workflow will be added for continuous integration.
 Add a screenshot of the successful GitHub Actions run (check the assets folder)
 ## Video Presentation Link
 https://youtu.be/nWJCcKan9do
+link for Part 2
+https://youtu.be/k1ghUjHcyE0
 
 ## Notes
 This project was developed as a command-line cybersecurity awareness chatbot for Part 1 of the assignment.
