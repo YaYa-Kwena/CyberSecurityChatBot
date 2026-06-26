@@ -5,7 +5,7 @@ using System.Data;
 public class DatabaseManager
 {
     // Change "yourpassword" to the MySQL Root Password you created earlier
-    private string connectionString = "Server=localhost;Database=CybersecurityBotDB;Uid=root;Pwd=yourpassword;";
+    private string connectionString = "Server=localhost;Database=CybersecurityBotDB;Uid=root;Pwd=matsatsitk9;";
 
     // Inserts a new task into the database table
     public void AddTask(string title, string description, int? reminderDays)

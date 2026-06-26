@@ -1,102 +1,75 @@
-﻿# CyberSecurityChatBot
+﻿# Cybersecurity Awareness Assistant (Full Portfolio of Evidence)
 
 ## Project Overview
-CyberSecurityChatBot is a C# console application developed for Part 1 of the Programming 2A assignment.  
-The chatbot is designed to educate users about basic cybersecurity awareness topics in a conversational way.
+[cite_start]The Cybersecurity Awareness Assistant is an interactive Graphical User Interface (GUI) application built using Windows Presentation Foundation (WPF) and .NET 8.0[cite: 75, 195]. [cite_start]Designed as a comprehensive Portfolio of Evidence (POE) project [cite: 71][cite_start], its core mission is to simulate real-life threat scenarios and educate South African citizens on identifying, mitigating, and managing modern cyber threats—such as phishing scams, weak password practices, and social engineering[cite: 53, 56, 57].
 
-## Features
-- WAV voice greeting when the application starts
-- ASCII art chatbot header
-- Personalized greeting using the user’s name
-- Basic cybersecurity chatbot responses
-- Topics include:
-  - Password safety
-  - Phishing scams
-  - Safe browsing
-  - Suspicious links
-- Input validation for empty or unsupported messages
-- Enhanced console interface with colours, dividers, and section headings
+[cite_start]The system seamlessly unifies a high-contrast conversational interface with local relational database persistence [cite: 7, 327][cite_start], an educational training mini-game [cite: 307][cite_start], and session auditing log features[cite: 311].
 
-## Technologies Used
-- C#
-- .NET Console Application
-- Visual Studio 2022
+---
 
-## Project Structure
+## Key Features across Milestones
 
+### Part 1 & Part 2 Foundations (Console to GUI Migration)
+* [cite_start]**Multimedia Initialization:** Plays a custom recorded `.wav` voice greeting asset automatically upon application launch[cite: 113, 116, 208].
+* [cite_start]**Neo-Brutalism High-Contrast UI:** Features a stylized dark theme built with XAML, structured message bubble layout panels for natural readability, and an embedded console-style ASCII branding header[cite: 4, 7].
+* [cite_start]**Decoupled OOP Architecture:** Business logic is cleanly separated into dedicated classes (`ChatBot.cs`, `KeywordResponder.cs`, `SentimentDetector.cs`, and `MemoryStore.cs`) to ensure scalability.
+* [cite_start]**Advanced C# Flow Handling:** Uses generic collections (`Dictionary`, `List`) to track conversational states alongside a `Func<>` delegate to manage data interaction pipelines[cite: 4, 200].
+* [cite_start]**Dynamic Engagement & Sentiment Detection:** Recognizes core cybersecurity keywords (e.g., password, scam, privacy, phishing)  [cite_start]and emotional state cues (worried, curious, frustrated)  [cite_start]to adapt responses with varied, randomized advice pools.
+
+### Part 3 / Final POE Enhancements
+* [cite_start]**Task Assistant Checklist (MySQL Storage):** Integrates a secure database management system to permanently save, load, and track critical cybersecurity tasks directly via a local MySQL server[cite: 315, 327].
+* [cite_start]**Cybersecurity Training Mini-Game:** An interactive 10+ question multiple-choice and true/false quiz evaluation engine that tracks player score matrices and returns immediate conversational reasoning feedback directly in the chat window[cite: 346, 354, 356, 359, 361].
+* [cite_start]**Simulated NLP Phrase Parsing Engine:** Employs a localized phrase parsing service that handles text casing normalization and soft matching token validations, letting the chatbot interpret diverse user phrasings intelligently while minimizing input errors[cite: 376, 378, 388].
+* [cite_start]**Automated Activity Logger:** Silently logs critical program execution records (e.g., successful database writes, mini-game initiations, intent triggers) during a session and prints a clean, truncated list view on user command[cite: 408, 410, 414, 430].
+
+---
+
+## System Architecture & Project Files
+
+```text
 CyberSecurityChatBot
-│
-├── Assets
-│   ├── ascii-art.txt
-│   └── greeting.wav
-├── Models
-│   └── UserProfile.cs
-├── Services
-│   ├── AudioService.cs
-│   ├── ChatbotService.cs
-│   └── ConsoleUIService.cs
-├── Program.cs
-├── README.md
-└── CyberSecurityChatBot.csproj
+├── Assets/
+│    ├── ascii-art.txt          # Part 1 Console UI layout visual banner asset
+│    └── greeting.wav           # Part 1 High-quality voice welcoming audio file
+├── Models/
+│    └── MessageBubble.cs       # Holds styling, text, and alignment data properties
+├── Services/
+│    ├── DatabaseManager.cs     # Manages all MySQL CRUD connection logic
+│    ├── QuizEngine.cs          # Orchestrates multi-format question mechanics
+│    ├── NlpParser.cs           # Runs soft keyword string manipulation parsing
+│    └── ActivityLogger.cs      # Logs and limits platform activity history
+├── MainWindow.xaml             # Split-panel layout (Chat & Dashboard)
+├── MainWindow.xaml.cs          # Central interaction event hub routers
+└── README.md
+## Prerequisites & Database Setup. 
+### MySQL Local Server SetupThis application requires a local relational database instance to store data points persistently:  
+#### Ensure MySQL Server (v8.0 or newer) is running locally on your machine over port 3306.
+#### Launch MySQL Workbench, connect to your server, and run this initialization script to build out the assignment's database schema:
+### SQL 
+CREATE DATABASE IF NOT EXISTS CybersecurityBotDB;
+USE CybersecurityBotDB;
 
+CREATE TABLE IF NOT EXISTS UserTasks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    reminder_days INT DEFAULT NULL,
+    is_completed BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+### 2. Configure Your Connection Credentials
+#### Before compiling the project inside Visual Studio, ensure the connection string properties match your database account credentials:
+#### Open Services/DatabaseManager.cs.
+#### Update the connectionString private field with your matching local password configuration:
+## C#private string connectionString = "Server=localhost;Database=CybersecurityBotDB;Uid=root;Pwd=YOUR_PASSWORD_HERE;";
+### How to Run the Application
+#### Open the primary project solution file (.sln) within Visual Studio 2022.
+#### Open the NuGet Package Manager Console (Tools > NuGet Package Manager > Package Manager Console) and verify that the database dependencies are restored by running:
+#### Install-Package MySql.Data
+#### Press F5 or click the green Start icon to build and execute the application.
+#### Interact naturally with the bot in the chat bubble screen or observe real-time data adjustments on the dashboard panel.
 
-## How to Run the Program (for part 1)
-1. Open the project in Visual Studio 2022.
-2. Make sure the NuGet package System.Windows.Extensions is installed.
-3. Ensure that:
-   - Assets/ascii-art.txt
-   - Assets/greeting.wav
-   are included in the project.
-4. Set the asset file properties:
-   - Build Action = Content
-   - Copy to Output Directory = Copy if newer
-5. Build and run the project.
-6. Enter your name when prompted.
-7. Ask the chatbot questions about cybersecurity topics.
-
-## Example Questions
-- How are you?
-- What is your purpose?
-- What can I ask you about?
-- Tell me about password safety
-- What is phishing?
-- Give me safe browsing tips
-- How do I identify a suspicious link?
-
-  # Cybersecurity Awareness Chatbot (Part 2 - WPF GUI)
-
-## Project Overview & Part 2 Updates
-Welcome to Part 2 of the Cybersecurity Awareness Chatbot! In this phase, the application has been entirely transformed from a standard command-line interface into a fully interactive **Graphical User Interface (GUI)** using **Windows Presentation Foundation (WPF)**.
-
-**Key Updates in this Release:**
-* **Modern GUI Design:** A sleek, high-contrast dark theme built with XAML, featuring color-coded chat bubbles and my custom ASCII shield art.
-* **Multimedia Integration:** Still plays a custom voice greeting automatically upon launching.
-* **Decoupled Architecture:** The backend logic has been professionally separated into distinct, scalable classes (`ChatBot.cs`, `KeywordResponder.cs`, `SentimentDetector.cs`, and `MemoryStore.cs`).
-* **Advanced C# Features:** Implemented generic collections (`Dictionary`, `List`) for memory tracking and keyword pools, alongside a `Func` delegate to strictly separate the UI thread from the logic processing pipeline.
-* **Dynamic Conversations:** The bot now detects user sentiment (e.g., worried, curious), remembers the user's name and favorite topics, and maintains state-aware conversation flows utilizing random response pools to keep the chat engaging.
-
-## How to Run the Application
-
-### Prerequisites
-* **Visual Studio 2022** (with the ".NET desktop development" workload installed)
-* **.NET 8.0 SDK**
-
-### Execution Steps
-1. **Clone the repository** to your local machine using Git:
-   ```bash
-   git clone [https://github.com/YaYa-Kwena/CyberSecurityChatBot.git](https://github.com/YaYa-Kwena/CyberSecurityChatBot.git)
-2. ** Run the build
-
-## GitHub and CI
-This project is managed using GitHub with meaningful commits for each development stage.  
-A GitHub Actions workflow will be added for continuous integration.
-
-## CI Screenshot
-Add a screenshot of the successful GitHub Actions run (check the assets folder)
-## Video Presentation Link
-https://youtu.be/nWJCcKan9do
-link for Part 2
-https://youtu.be/k1ghUjHcyE0
-
-## Notes
-This project was developed as a command-line cybersecurity awareness chatbot for Part 1 of the assignment.
+### Standard Interaction Command Prompts
+#### To Register Checklists: Type conversational phrases like "add a password task" or "remind me to review my privacy settings".
+#### To Launch Training Mini-Games: Type phrases like "play quiz", "test me", or "start the game".
+#### To Audit System Event Frameworks: Type commands like "show activity log" or "what have you done for me?".  
